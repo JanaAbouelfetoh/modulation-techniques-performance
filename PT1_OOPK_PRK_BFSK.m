@@ -1,4 +1,3 @@
-% Digital Communications Final Project
 % Part I: Performance of OOK, PRK, and BFSK (Peak Eb/N0)
 
 clear; clc; close all;
@@ -45,7 +44,7 @@ BER_PRK_theory = qfunc(sqrt(2 * 10.^(EbN0_dB/10)));
 % BFSK Coherent Theory: Q(sqrt(Eb/N0))
 BER_BFSK_theory = qfunc(sqrt(10.^(EbN0_dB/10)));
 
-% OOK Peak Theory: Q(sqrt(0.5 * Eb/N0))  <-- REPLACE WITH THIS LINE
+% OOK Peak Theory: Q(sqrt(0.5 * Eb/N0))
 BER_OOK_theory = qfunc(sqrt(0.5 * 10.^(EbN0_dB/10)));
 
 
@@ -84,7 +83,7 @@ semilogy(EbN0_dB, BER_OOK_theory, 'b--', 'LineWidth', 2);
 semilogy(EbN0_dB, BER_PRK_theory, 'r--', 'LineWidth', 2);
 semilogy(EbN0_dB, BER_BFSK_theory, 'g--', 'LineWidth', 2);
 
-% 3. Built-in PRK Verification (Dotted line with markers)
+% 3. Built-in PRK Verification 
 semilogy(EbN0_dB, BER_PRK_builtin, 'k:x', 'MarkerSize', 10, 'LineWidth', 2);
 
 grid on;
