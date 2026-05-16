@@ -23,7 +23,7 @@ P_bpsk = mean(abs(tx_bpsk).^2);    % Eb = 1
 for k = 1 : length(SNR_dB)
     Eb = P_bpsk; 
     N0 = Eb / SNR_linear(k);
-    noise = sqrt(N0 / 2) * randn(1, N_bits);   % Corrected: N0/2 variance
+    noise = sqrt(N0 / 2) * randn(1, N_bits);   % N0/2 variance
     
     rx_bpsk = tx_bpsk + noise;
     detected_bpsk = (rx_bpsk >= 0);   
@@ -47,7 +47,7 @@ for k = 1 : length(SNR_dB)
     Eb = P_qpsk / 2; % Eb = 1
     N0 = Eb / SNR_linear(k);
     
-    % Corrected: Divided by 2 for baseband per-dimension noise variance
+    % Divided by 2 for baseband per-dimension noise variance
     noise_I = sqrt(N0 / 2) * randn(1, num_sym_qpsk);
     noise_Q = sqrt(N0 / 2) * randn(1, num_sym_qpsk);
     
@@ -78,7 +78,7 @@ for k = 1 : length(SNR_dB)
     Eb = P_4qam / 2; % Eb = 1
     N0 = Eb / SNR_linear(k);
     
-    % Corrected: Divided by 2 for baseband per-dimension noise variance
+    % Divided by 2 for baseband per-dimension noise variance
     noise_I_qam = sqrt(N0 / 2) * randn(1, num_sym_4qam);
     noise_Q_qam = sqrt(N0 / 2) * randn(1, num_sym_4qam);
     
