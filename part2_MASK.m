@@ -103,7 +103,7 @@ for m_idx = 1:num_M
         
         % --- Step 7: Calculate and store BER ---
         prob_error = num_errors / num_bits;
-        BER = [BER, prob_error];                          %#ok<AGROW>
+        BER = [BER, prob_error];                         
     end
     
     BER_sim(m_idx, :) = BER;
