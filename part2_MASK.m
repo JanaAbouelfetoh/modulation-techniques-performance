@@ -1,7 +1,5 @@
-%% Digital Communications Final Project
 %  Part II: Compare the Performance of M-ASK for M = 2, 4, 8
-%  Author: [Your Name]
-%  Date: 2026
+
 
 clc; clear; close all;
 
